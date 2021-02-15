@@ -1,0 +1,25 @@
+.fa-check{
+    color: #2FAB73;
+}
+.fa-times{
+    color: rgb(238, 99, 99);
+}
+.card{
+    border-radius: 10px;
+    
+}
+.fa-arrow-circle-right{
+    font-size: 32px;
+    color: #F53838;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.fa-arrow-circle-right {
+    animation: rotate 1s ease-in-out 0s;
+  }
+  
+  @keyframes rotate {
+      from { transform: rotate(50deg); }
+      to { transform: rotate(360deg); }
+  }
+

@@ -1,0 +1,89 @@
+<div class="container mt-5">
+
+    <div class="post-content">
+        <div class="blog-tag">
+            <span class="blog-each-tag">eveniet,</span>
+            <span class="blog-each-tag">voluptatibus,</span>
+            <span class="blog-each-tag">dolorum</span>
+        </div>
+        <h1 class="blog-list-item-title mt-2" style="text-align: left;" (click)="gotoBlogPost('blogDetail')">Ut fuga
+            aliquam debitis. Eum nobis placeat perferendis ipsam harum. </h1>
+        <div class="posted-by-details">
+
+            <img class="user-thumbnail-image" src="http://placehold.it/400x200" alt="blog">
+            <div class="col ml-10">
+                <span class="posted-by-user">User name</span>
+                <div class="posted-on-details">
+                    <span>{{date | date: 'dd/MM/yyyy'}}</span>
+                    <span class="time-to-read">6 mins read</span>
+                </div>
+            </div>
+
+        </div>
+        <img class="col-12 mt-5 mb-5" style="padding: 0;" src="../../assets/images/blog.jpeg">
+    </div>
+
+    <p class="p">
+        Rerum ipsa doloremque numquam. Corrupti illo vel. Ea doloremque dolorem sit. Aperiam et velit iste doloremque
+        omnis id veritatis pariatur quo. Distinctio numquam quaerat dicta rem suscipit aliquam.
+
+        Necessitatibus cum sit quasi aut quasi velit. Velit quo tempore porro ad vero quis quam. Perspiciatis rerum
+        repellat suscipit voluptatem et impedit sed ex.
+
+        Dolorem rerum minima est quisquam autem nisi. Nihil quis natus. Sunt placeat debitis. Et illum temporibus ea
+        odio excepturi soluta. Quia repellendus qui et unde quas. Soluta doloribus ipsam impedit fugit est.
+    </p>
+    <p class="p">
+        Hic quaerat quidem earum in eaque dolor vel. Minus accusantium sed molestias odio saepe voluptas. Repellat ut
+        nulla magni dolorum omnis. Qui deserunt voluptatibus numquam et et.
+
+        Non qui nihil numquam nesciunt et nam assumenda culpa. Aliquid maiores nulla magni consequatur maxime. Qui
+        tenetur maiores ipsum nihil veniam dolores.
+
+        Nihil quam dignissimos maxime sed qui modi ut vel. Esse fugiat esse. Possimus ullam non consectetur. Soluta sed
+        sed.
+    </p>
+
+
+
+</div>
+<div class="similar-post-container">
+    <div class="section ">
+        <h1 style="text-align: left;">You might also like</h1>
+        <div class="row  justify-content-center">
+            <!-- repeats the below container 6 times -->
+            <ng-container *ngFor="let i of [].constructor(3)">
+                <div class="col-lg-4 col-md-6 col-xl-4 col-xs-12 col-sm-12 mt-4">
+
+                    <img class="card-img-top" src="../../assets/images/blog.jpeg" alt="blog">
+                    <div class="post-content">
+                        <div class="blog-tag">
+                            <span class="blog-each-tag">eveniet,</span>
+                            <span class="blog-each-tag">voluptatibus,</span>
+                            <span class="blog-each-tag">dolorum</span>
+                        </div>
+                        <a class="blog-list-item-title" (click)="gotoBlogPost('blogDetail')">{{blogTitle}} </a>
+                    </div>
+                    <div class="posted-by-details">
+
+                        <img class="user-thumbnail-image" src="http://placehold.it/400x200" alt="blog">
+                        <div class="col ml-10">
+                            <span class="posted-by-user">User name</span>
+                            <div class="posted-on-details">
+                                <span>{{date | date: 'dd/MM/yyyy'}}</span>
+                                <span class="time-to-read">6 mins read</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </ng-container>
+
+
+        </div>
+
+
+    </div>
+</div>

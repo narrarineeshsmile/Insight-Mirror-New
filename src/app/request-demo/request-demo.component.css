@@ -1,0 +1,5 @@
+.form-control{
+    box-shadow: 4px 12px 25px rgba(71, 55, 255, 0.08);
+    border-radius: 8px; 
+    height: 50px;
+}

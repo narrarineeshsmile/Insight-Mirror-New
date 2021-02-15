@@ -1,0 +1,120 @@
+<div class="row recent-post-container">
+    <div class="col-xl-6 col-lg-7 col-sm-12 col-xs-12" style="display: flex;
+        flex-direction: column;
+          justify-content: center;">
+        <img class="recent-post-image " src="http://placehold.it/1920x1080" alt="blog"
+            (click)="gotoBlogPost('blogDetail')">
+    </div>
+    <div class="col-xl-6 col-lg-5 col-sm-12 col-xs-12 recent-post-details">
+        <div class="blog-tag">
+            <span class="blog-each-tag">eveniet,</span>
+            <span class="blog-each-tag">voluptatibus</span>
+        </div>
+        <span class="recent-blog-title" (click)="gotoBlogPost('blogDetail')" style="cursor: pointer;">Officia iusto et
+            rerum excepturi sit. </span>
+        <p class="p">Occaecati ut voluptates id. Quod ut nobis dolor eum vitae atque et illo commodi. Perspiciatis ullam
+            rerum
+            deleniti itaque magnam iste placeat dignissimos. Quas illo labore velit velit quasi. Eum quia
+            dolorem eaque minima iusto est.</p>
+        <div class="posted-by-details">
+
+            <img class="user-thumbnail-image" src="http://placehold.it/400x200" alt="blog">
+            <div class="col ml-10">
+                <span class="posted-by-user">User name</span>
+                <div class="posted-on-details">
+                    <span>{{date | date: 'dd/MM/yyyy'}}</span>
+                    <span class="time-to-read">6 mins read</span>
+                </div>
+            </div>
+
+        </div>
+        <a class="btn btn-primary recent-post-btn" href="#subscribe">Subscribe</a>
+    </div>
+
+</div>
+
+<div class="blog-container">
+    <div class=" search-bar height: 1.5rem;">
+
+
+        <input
+            style="display: block;
+        width: 100%;
+        height: inherit;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; width: 200px;  border-radius: 10px 0 0 10px;"
+            type="text" placeholder="Search" aria-label="Search">
+        <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+
+    <div class="section">
+
+        <div class="row  justify-content-center">
+            <!-- repeats the below container 6 times -->
+            <ng-container *ngFor="let i of [].constructor(6)">
+                <div class="col-lg-4 col-md-6 col-xl-4 col-xs-12 col-sm-12 mt-4">
+
+                    <img class="card-img-top" src="../../assets/images/blog.jpeg" alt="blog">
+                    <div class="post-content">
+                        <div class="blog-tag">
+                            <span class="blog-each-tag">eveniet,</span>
+                            <span class="blog-each-tag">voluptatibus,</span>
+                            <span class="blog-each-tag">dolorum</span>
+                        </div>
+                        <a class="blog-list-item-title" (click)="gotoBlogPost('blogDetail')"
+                            style="cursor: pointer;">{{blogTitle}}</a>
+                    </div>
+                    <div class="posted-by-details">
+
+                        <img class="user-thumbnail-image" src="http://placehold.it/400x200" alt="blog">
+                        <div class="col ml-10">
+                            <span class="posted-by-user">User name</span>
+                            <div class="posted-on-details">
+                                <span>{{date | date: 'dd/MM/yyyy'}}</span>
+                                <span class="time-to-read">6 mins read</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </ng-container>
+
+
+        </div>
+
+
+    </div>
+    <div class="subscribe" id="subscribe">
+        <div class="container">
+            <div class="row email-subscription-container">
+                <div class="col">
+                    <h3>Subscribe for new articles</h3>
+                    <p class="p">Enter your email to receive notifications of new posts.</p>
+                </div>
+                <div class="col">
+
+                    <div class="email-subscription-button">
+                        <input class="subscribe-email-input" type="text" placeholder="Enter email ID">
+                        <button class="btn btn-primary subscribe-btn">Subscribe</button>
+                    </div>
+                    <span class="subscribe-conditions">By entering your email, you agree to our <span>Privacy
+                            policy</span>. </span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

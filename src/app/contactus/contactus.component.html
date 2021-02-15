@@ -1,0 +1,88 @@
+<div class="container">
+    <h3 class="text-center py-5">Contact Us</h3>
+    <div>
+        <form [formGroup]="contactForm">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label for="name" class="control-label required">NAME</label>
+                    <input type="text" class="form-control" name="name" formControlName="name" required>
+                    <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="text-danger">
+                        <div *ngIf="f.name.errors.required">
+                            *Name is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label for="email" class="control-label required">INSTITUTION NAME</label>
+                    <input type="email" class="form-control" name="email" formControlName="institutename" required>
+                    <div *ngIf="f.institutename.invalid && (f.institutename.dirty || f.institutename.touched)"
+                        class="text-danger">
+                        <div *ngIf="f.institutename.errors.required">
+                            *Institution name is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label for="email" class="control-label required">EMAIL ID</label>
+                    <input type="email" class="form-control" name="email" formControlName="email" required>
+                    <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="text-danger">
+                        <div *ngIf="f.email.errors.required">
+                            *Email is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label for="email" class="control-label required">PHONE NUMBER</label>
+                            <input type="email" class="form-control" name="phone" formControlName="mobile" required
+                                minlength="10">
+                            <div *ngIf="f.mobile.invalid && (f.mobile.dirty || f.mobile.touched)" class="text-danger">
+                                <div *ngIf="f.mobile.errors.required">
+                                    *Mobile number required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label for="text" class="control-label required">INSTITUTION SIZE</label>
+                            <input type="text" class="form-control" name="institutionname"
+                                formControlName="institutionsize" required>
+                            <div *ngIf="f.institutionsize.invalid && (f.institutionsize.dirty || f.institutionsize.touched)"
+                                class="text-danger">
+                                <div *ngIf="f.institutionsize.errors.required">
+                                    *Institution size is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center py-5">
+                <svg width="309" height="59" viewBox="0 0 659 109" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="pointer" (click)="submit()">
+                    <rect width="659" height="109" rx="8" fill="url(#paint0_linear)" />
+                    <path
+                        d="M285.718 62.216C284.406 62.216 283.174 62.04 282.022 61.688C280.886 61.336 279.918 60.832 279.118 60.176L280.174 57.92C281.006 58.544 281.87 59.008 282.766 59.312C283.678 59.6 284.67 59.744 285.742 59.744C286.926 59.744 287.838 59.536 288.478 59.12C289.134 58.704 289.462 58.12 289.462 57.368C289.462 56.728 289.158 56.24 288.55 55.904C287.958 55.552 286.974 55.224 285.598 54.92C283.454 54.456 281.894 53.856 280.918 53.12C279.942 52.384 279.454 51.312 279.454 49.904C279.454 48.896 279.726 48 280.27 47.216C280.814 46.432 281.582 45.816 282.574 45.368C283.582 44.92 284.742 44.696 286.054 44.696C287.254 44.696 288.39 44.88 289.462 45.248C290.55 45.6 291.438 46.096 292.126 46.736L291.094 48.992C289.574 47.776 287.894 47.168 286.054 47.168C284.95 47.168 284.078 47.4 283.438 47.864C282.798 48.312 282.478 48.928 282.478 49.712C282.478 50.384 282.758 50.896 283.318 51.248C283.894 51.6 284.87 51.928 286.246 52.232C287.67 52.568 288.83 52.936 289.726 53.336C290.622 53.72 291.31 54.224 291.79 54.848C292.27 55.456 292.51 56.224 292.51 57.152C292.51 58.176 292.238 59.072 291.694 59.84C291.15 60.592 290.366 61.176 289.342 61.592C288.318 62.008 287.11 62.216 285.718 62.216ZM304.435 62.216C302.083 62.216 300.299 61.616 299.083 60.416C297.883 59.2 297.283 57.424 297.283 55.088V44.912H300.331V55.256C300.331 56.728 300.675 57.848 301.363 58.616C302.051 59.368 303.075 59.744 304.435 59.744C305.763 59.744 306.771 59.36 307.459 58.592C308.163 57.824 308.515 56.712 308.515 55.256V44.912H311.563V55.088C311.563 57.408 310.955 59.176 309.739 60.392C308.523 61.608 306.755 62.216 304.435 62.216ZM327.657 53.168C328.649 53.456 329.409 53.96 329.937 54.68C330.481 55.4 330.753 56.288 330.753 57.344C330.753 58.8 330.233 59.944 329.193 60.776C328.169 61.592 326.737 62 324.897 62H317.145V44.912H324.657C326.417 44.912 327.801 45.312 328.809 46.112C329.817 46.896 330.321 47.984 330.321 49.376C330.321 50.272 330.081 51.056 329.601 51.728C329.137 52.384 328.489 52.864 327.657 53.168ZM320.169 52.112H324.153C326.297 52.112 327.369 51.312 327.369 49.712C327.369 48.912 327.105 48.312 326.577 47.912C326.049 47.512 325.241 47.312 324.153 47.312H320.169V52.112ZM324.561 59.6C325.681 59.6 326.497 59.4 327.009 59C327.537 58.6 327.801 57.968 327.801 57.104C327.801 56.224 327.537 55.576 327.009 55.16C326.497 54.744 325.681 54.536 324.561 54.536H320.169V59.6H324.561ZM352.371 44.912V62H349.635V51.392L345.099 62H343.059L338.499 51.512V62H335.763V44.912H338.211L344.091 58.28L349.923 44.912H352.371ZM358.106 44.912H361.202V62H358.106V44.912ZM370.911 47.456H365.343V44.912H379.623V47.456L374.031 47.456V62H370.911V47.456Z"
+                        fill="#E5E5E5" />
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="309.625" y1="-85.6428" x2="425.526" y2="415.588"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F37979" />
+                            <stop offset="1" stop-color="#F37979" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+
+.footer{
+    display: flex;
+     background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+    color: white;
+    justify-content: space-around;
+    align-self: center;
+    flex-direction: column;
+    padding:50px
+}
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

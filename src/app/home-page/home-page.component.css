@@ -1,0 +1,37 @@
+.intro, .illustration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.intro-1{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.card{
+    background: #FFFFFF;
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+    border-radius: 20px;
+}
+.carousel-inner{
+  border-radius: 24px;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+}
+.indicators{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    
+}
+.indicators.active{
+   background-color: #F53838;
+}
+.fa-arrow-circle-right, .fa-arrow-circle-left{
+    font-size: 32px;
+    color: #F53838;
+}

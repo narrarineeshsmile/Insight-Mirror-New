@@ -1,0 +1,19 @@
+
+  .navbar .navbar-nav li a{
+    font-size: 18px;
+  }
+ 
+  /* Animation */
+  .animate{
+    padding: 0px 10px 0px 0px;
+    transition: all ease 0.4s;
+  }
+  .navbar-brand {
+    animation: rotate 1s ease-in-out 0s;
+  }
+  
+  @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+  }
+  
